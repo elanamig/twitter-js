@@ -57,3 +57,34 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+.wrapper {
+  width: 800px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ .doggie{
+  width: 50px;
+  height: 50px;
+  display:block;
+  float:left;
+  position: fixed;
+}
+
+.info{
+  width: 720px;
+  display:block;
+  float:right;
+}
+
+.userName {
+  color: #1DA1F2;
+}

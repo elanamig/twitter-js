@@ -8,10 +8,10 @@ router.get('/', function (req, res) {
   res.render( 'index', { tweets: tweets } );
 });
 
-// router.get('/stylesheets/style.css', function (req, res) {
-//     console.log(req.url);
-//     res.sendFile('/stylesheets/style.css');
-//     //res.render( 'index', { tweets: tweets } );
-// });
+router.get( '/users/:name', function (req, res) {
+  res.render()
+  console.log( req.params.name ); // --> 'nimit'
+});
+
 
 module.exports = router;
