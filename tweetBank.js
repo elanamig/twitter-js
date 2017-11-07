@@ -1,9 +1,11 @@
 const _ = require('lodash');
 var data = [];
 var tweetCounter = 0;
-function add (name, content, picture) {
 
-    data.push({ name: name, content: content, picture: picture, id: ++tweetCounter });
+function add (name, content, picture) {
+    ++tweetCounter
+    data.push({ name: name, content: content, picture: picture, id:  tweetCounter});
+    return tweetCounter;
 }
 
 function list () {
