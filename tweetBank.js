@@ -1,8 +1,9 @@
 const _ = require('lodash');
 var data = [];
-
+var tweetCounter = 0;
 function add (name, content, picture) {
-    data.push({ name: name, content: content, picture: picture });
+
+    data.push({ name: name, content: content, picture: picture, id: ++tweetCounter });
 }
 
 function list () {
@@ -10,6 +11,7 @@ function list () {
 }
 
 function find (properties) {
+
     return _.cloneDeep(_.filter(data, properties));
 }
 
@@ -34,6 +36,8 @@ const getFakeTweet = function() {
     return "Fullstack Academy is " + randArrayEl(awesome_adj) + "! The instructors are just so " + randArrayEl(awesome_adj) + ". #fullstacklove #codedreams";
 };
 
+module.exports.add ('x', 'hi', getFakePicture());
+module.exports.add('x', "tada", getFakePicture());
 
 for (let i = 0; i < 10; i++) {
     module.exports.add( getFakeName(), getFakeTweet(), getFakePicture() );

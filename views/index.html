@@ -22,8 +22,10 @@
           </div>
 
           <div class ='info'>
-            <h5 class = 'userName'>{{tweet.name}}</h5>
-            <p>{{tweet.content}}</p>
+        <!--    <h5 class = 'userName'>{{tweet.name}}</h5>
+            <p>{{tweet.content}}</p> -->
+           <h5 class = 'userName'> <a href="/users/{{tweet.name}}">{{tweet.name}}</a> - <a href="/tweets/{{tweet.id}}">{{tweet.content}}</a></h5>
+
           </div>
       </div>
 

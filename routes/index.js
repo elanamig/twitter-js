@@ -9,9 +9,16 @@ router.get('/', function (req, res) {
 });
 
 router.get( '/users/:name', function (req, res) {
-  res.render()
-  console.log( req.params.name ); // --> 'nimit'
+    var name = req.params.name;
+    var list = tweetBank.find({name: name});
+    //console.log(list);
+    res.render('index', {tweets: list});
+  //console.log( req.params.name ); // --> 'nimit'
 });
 
+router.get( '/tweets/:tweetId', function (req, res) {
+    var list = tweetBank.find({id: Number.parseInt(req.params.tweetId)});
+    res.render('index', {tweets: list});
+});
 
 module.exports = router;
